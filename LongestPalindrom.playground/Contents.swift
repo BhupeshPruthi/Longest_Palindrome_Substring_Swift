@@ -1,13 +1,10 @@
 import UIKit
 
-var str = "Hello, playground"
-
 func findLongestPalindrom(s: String) -> String {
     let arr = Array(s)
-
     var start = 0
     var end = 0
-    for (index, c) in s.enumerated() {
+    for (index, _) in s.enumerated() {
         let l1 = longestPalindromFromCenter(s: arr, left: index, right: index)
         let l2 = longestPalindromFromCenter(s: arr, left: index, right: index + 1)
         let l = max(l1, l2)
